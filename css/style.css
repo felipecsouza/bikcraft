@@ -1,131 +1,17 @@
 @import url(./reset.css);
+@import url(./root.css);
+@import url(./header.css);
 
-:root {
-  --w: #ffffff;
-  --c1: #f7f7f7;
-  --c2: #ededed;
-  --c3: #e1e1e1;
-  --c4: #d2d2d2;
-  --c5: #bcbcbc;
-  --c6: #999999;
-  --c7: #797979;
-  --c8: #434343;
-  --c9: #323232;
-  --c10: #282828;
-  --c11: #1b1b1b;
-  --c12: #000000;
-
-  --p1: #ffbb00;
-  --p2: #e7ad00;
-  --p3: #cd8200;
-  --p4: #c16a00;
-  --p5: #993100;
-  --p6: #530f02;
-
-  --font-1: "Poppins", sans-serif;
-  --font-2: "Roboto", sans-serif;
-
-  --font-1-xxl: 600 4rem/1.125 "Poppins", sans-serif;
-  --font-1-xl: 600 3rem/1.125 "Poppins", sans-serif;
-  --font-1-l: 600 2.5rem/1.125 "Poppins", sans-serif;
-  --font-1-m: 600 2rem/1.25 "Poppins", sans-serif;
-  --font-1-s: 600 1.5rem/1.5 "Poppins", sans-serif;
-  --font-1-xs: 400 1.125rem/1.5 "Poppins", sans-serif;
-
-  --font-2-l: 500 2.5rem/1.5 "Roboto", sans-serif;
-  --font-2-m: 500 2rem/1.5 "Roboto", sans-serif;
-  --font-2-s: 500 1.5rem/1.5 "Roboto", sans-serif;
-  --font-2-xs: 400 1.125rem/1.5 "Roboto", sans-serif;
-
-  --font-1-xxl-b: 700 4rem/1.125 "Poppins", sans-serif;
-  --font-1-xl-b: 700 3rem/1.125 "Poppins", sans-serif;
-  --font-1-l-b: 700 2.5rem/1.125 "Poppins", sans-serif;
-  --font-1-m-b: 700 2rem/1.25 "Poppins", sans-serif;
-  --font-1-s-b: 700 1.5rem/1.5 "Poppins", sans-serif;
-  --font-1-xs-b: 700 1.125rem/1.5 "Poppins", sans-serif;
-
-  --font-2-l-b: 700 2.5rem/1.5 "Roboto", sans-serif;
-  --font-2-m-b: 700 2rem/1.5 "Roboto", sans-serif;
-  --font-2-s-b: 700 1.5rem/1.5 "Roboto", sans-serif;
-  --font-2-xs-b: 700 1.125rem/1.5 "Roboto", sans-serif;
-}
-
-.header__bg {
+.main__bg {
   background-color: var(--c12);
-}
-
-.header__container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 75rem;
-  align-items: center;
-  margin: 0 auto;
-  padding: 1.25rem;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-}
-
-.header__menu {
-  display: flex;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.header__menu > li > a {
-  display: inline-block;
-  padding: 1rem 0;
   color: var(--w);
-  font-size: 1.125rem;
-  position: relative;
 }
 
-.header__menu > li > a::after {
-  content: "";
-  display: block;
-  height: 0.125rem;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: left;
-  background-color: var(--w);
-  transition: 0.3s ease-in-out;
-  position: absolute;
-  bottom: 0.5rem;
+.main__container {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: 0rem 2.5rem;
 }
 
-.header__menu > li > a:hover::after {
-  /* width: 100%; */
-  transform: scaleX(1);
-}
-
-@media (max-width: 50rem) {
-  .header__menu {
-    gap: 20px;
-  }
-
-  .header__menu > li > a {
-    background-color: var(--c11);
-    padding: 12px 16px;
-    border-radius: 5%;
-  }
-
-  @media (hover: hover) {
-    .header__menu > li > a:hover {
-      background-color: var(--c10);
-    }
-  }
-
-  .header__menu > li > a::after {
-    display: none;
-  }
-}
-
-@media (max-width: 37.5rem) {
-  .header__menu {
-    gap: 0.75rem;
-  }
-
-  .header__menu > li > a {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.875rem;
-  }
+.main__titulo {
 }
