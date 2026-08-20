@@ -30,18 +30,17 @@
 .header__menu > li > a::after {
   content: "";
   display: block;
+  position: absolute;
   height: 0.125rem;
   width: 100%;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: 20%;
   background-color: var(--w);
   transition: 0.3s ease-out;
-  position: absolute;
   bottom: 0.5rem;
 }
 
 .header__menu > li > a:hover::after {
-  /* width: 100%; */
   transform: scaleX(1);
 }
 
