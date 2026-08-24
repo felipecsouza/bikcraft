@@ -1,0 +1,64 @@
+.bicicletas {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  padding-top: 12.5rem;
+}
+
+.bicicletas__titulo {
+  margin-bottom: 2.5rem;
+}
+
+.bicicletas__lista {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.bicicletas__card {
+  flex: 1;
+}
+
+.bicicletas__card-link {
+  display: grid;
+  gap: 1rem;
+}
+
+.bicicletas__card-link > img {
+  border-radius: 5px;
+}
+
+.bicicletas__info::before {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.5rem;
+  background-color: var(--p1);
+  transform: sacalex(1);
+  transform-origin: left;
+  transition: 0.3s ease-out;
+}
+
+.bicicletas__info {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 0.5rem 0.625rem;
+}
+
+.bicicletas__info > h3 {
+  transition: 0.3s ease-out;
+}
+
+.bicicletas__info > span {
+  grid-column: 2;
+}
+
+@media (hover: hover) {
+  .bicicletas__card-link:hover .bicicletas__info::before {
+    transform: scaleX(2);
+  }
+
+  .bicicletas__card-link:hover .bicicletas__info > h3 {
+    transform: translateX(0.75rem);
+  }
+}
