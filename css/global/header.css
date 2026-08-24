@@ -22,7 +22,6 @@
 .header__menu > li > a {
   display: inline-block;
   padding: 1rem 0;
-  color: var(--w);
   font-size: 1.125rem;
   position: relative;
 }
@@ -35,7 +34,7 @@
   width: 100%;
   transform: scaleX(0);
   transform-origin: 20%;
-  background-color: var(--w);
+  background-color: var(--c0);
   transition: 0.3s ease-out;
   bottom: 0.5rem;
 }
@@ -73,6 +72,5 @@
 
   .header__menu > li > a {
     padding: 0.5rem 0.75rem;
-    font-size: 0.875rem;
   }
 }
