@@ -1,6 +1,5 @@
 .tecnologia__bg {
   position: relative;
-  z-index: -1;
 }
 
 .tecnologia__bg::after {
@@ -11,7 +10,6 @@
   position: absolute;
   left: 2.5rem;
   bottom: 2.5rem;
-  z-index: -1;
 }
 
 .tecnologia__container {
@@ -87,7 +85,7 @@
 .tecnologia__img > img {
   position: absolute;
   max-width: none;
-  height: calc(100%+10rem);
+  height: calc(100% + 10rem);
   width: calc(100% + 9.375rem);
   object-fit: cover;
   object-position: left center;
