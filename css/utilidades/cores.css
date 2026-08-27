@@ -24,6 +24,7 @@
   --g2: linear-gradient(#ffb60d, #e59317);
 }
 
+/* ============= CORES DE TEXTO ESCALA DE CINZA ============================ */
 .cor-0 {
   color: var(--c0);
 }
@@ -64,6 +65,7 @@
   color: var(--c12);
 }
 
+/* ============= CORES DE TEXTO DESTAQUE ============================ */
 .cor-p1 {
   color: var(--p1);
 }
@@ -83,9 +85,20 @@
   color: var(--p6);
 }
 
+/* ============= CORES GRADIENTE ============================ */
 .cor-g1 {
   background-image: var(--g1);
 }
 .cor-g2 {
   background-image: var(--g2);
+}
+
+/* ============= CORES BACKGROUND ============================ */
+
+.bg-c12 {
+  background-color: var(--c12);
+}
+
+.bg-c11 {
+  background-color: var(--c11);
 }
