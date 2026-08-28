@@ -95,6 +95,10 @@
 
 /* ============= CORES BACKGROUND ============================ */
 
+.bg-p1 {
+  background-color: var(--p1);
+}
+
 .bg-c12 {
   background-color: var(--c12);
 }

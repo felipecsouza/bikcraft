@@ -1,4 +1,55 @@
 .depoimentos {
   width: 100%;
-  height: 600px;
+  max-height: 42.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+.depoimentos__img > img {
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: left bottom;
+  border-radius: 0;
+}
+
+.depoimentos__container {
+  display: grid;
+  align-content: center;
+  padding: 8.75rem 0 8.75rem 8.75rem;
+  position: relative;
+}
+
+.depoimentos__container::before {
+  content: "";
+  display: inline-block;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../../img/grafismos/grafismo-top-left-p.svg);
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+}
+
+.depoimentos__container::after {
+  content: "";
+  display: inline-block;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../../img/grafismos/grafismo-bottom-right-p.svg);
+  position: absolute;
+  bottom: 2.5rem;
+  right: 2.5rem;
+}
+
+.depoimentos__container > p {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 600;
+  max-width: 26ch;
+  margin-bottom: 2rem;
+}
+
+.depoimentos__container > span {
 }

@@ -80,6 +80,10 @@
     padding-bottom: 2.5rem;
   }
 
+  .parceiros__titulo {
+    margin-bottom: 1rem;
+  }
+
   .parceiros__lista {
     grid-template-columns: 1fr;
   }
