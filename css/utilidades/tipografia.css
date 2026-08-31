@@ -41,6 +41,13 @@
     sans-serif;
 }
 
+.font-1-ll {
+  font:
+    600 2.25rem/1.3 "Poppins",
+    sans-serif;
+  letter-spacing: 0.013em;
+}
+
 .font-1-l {
   font:
     400 1.5rem/1.5 "Poppins",

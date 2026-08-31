@@ -42,6 +42,10 @@ html {
   scroll-behavior: smooth;
 }
 
+button {
+  border: none;
+}
+
 img[src$=".jpg"] {
   border-radius: 5px;
 }

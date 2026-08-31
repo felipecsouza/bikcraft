@@ -1,0 +1,109 @@
+.seguros {
+  padding: 1.25rem;
+  padding-top: 5rem;
+  padding-bottom: 7.5rem;
+  position: relative;
+}
+
+.seguros::before {
+  content: "";
+  position: absolute;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../../img/grafismos/grafismo-bottom-left.svg);
+  left: 2.5rem;
+  bottom: 2.5rem;
+}
+
+.seguros__titulo {
+  margin-bottom: 3.75rem;
+}
+
+.seguros__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.seguros__card {
+  padding: 2rem 2rem 2rem 4rem;
+  border-radius: 0.3125rem;
+  transition: 0.2s ease-out;
+}
+
+.seguros__card:hover {
+  /* transform: scale(1.02); */
+  transform: translateY(-0.3125rem);
+}
+
+.seguros__card-topo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.seguros__card-preco {
+  display: grid;
+  justify-items: end;
+}
+
+.seguros__valor {
+  margin-bottom: -0.5rem;
+}
+
+.seguros__card-topo {
+  margin-bottom: 2.5rem;
+}
+
+.seguros__lista {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.seguros__lista > li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.seguros__lista > li::before {
+  content: "";
+  width: 0.8125rem;
+  height: 0.5625rem;
+  position: absolute;
+  background-image: url(../../img/icones/check.svg);
+  left: -1.4375rem;
+}
+
+.seguros__prata-btn {
+  background: initial;
+  background-color: var(--c10);
+}
+
+@media (hover: hover) {
+  .seguros__prata-btn:hover {
+    background: initial;
+    background-color: var(--c9);
+  }
+}
+
+@media (max-width: 1000px) {
+  .seguros__container {
+    gap: 1.25rem;
+  }
+
+  .seguros__card-topo {
+    margin-bottom: 1.5rem;
+  }
+
+  .seguros__valor {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .seguros__container {
+    grid-template-columns: 1fr;
+  }
+}
