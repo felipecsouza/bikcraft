@@ -6,19 +6,64 @@
   overflow: hidden;
 }
 
+@media (max-width: 600px) {
+  .depoimentos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.depoimentos__img {
+  overflow: hidden;
+  height: 100%;
+}
+
 .depoimentos__img > img {
   height: 100%;
-  overflow: hidden;
+  max-height: 42.5rem;
+  width: 100%;
   object-fit: cover;
-  object-position: left bottom;
+  object-position: center bottom;
   border-radius: 0;
+  transition: 0.4s ease-in-out;
+}
+
+@media (hover: hover) {
+  .depoimentos__img:hover > img {
+    transform: scale(1.03);
+  }
+}
+
+@media (max-width: 600px) {
+  .depoimentos__img {
+    display: none;
+  }
 }
 
 .depoimentos__container {
+  height: 100%;
   display: grid;
   align-content: center;
-  padding: 8.75rem 0 8.75rem 8.75rem;
+  justify-content: center;
+  padding: 8.75rem;
   position: relative;
+}
+
+@media (max-width: 1200px) {
+  .depoimentos__container {
+    padding: 5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .depoimentos__container {
+    padding: 5rem 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .depoimentos__container {
+    padding: 5rem;
+  }
 }
 
 .depoimentos__container::before {
@@ -43,13 +88,53 @@
   right: 2.5rem;
 }
 
+@media (max-width: 1200px) {
+  .depoimentos__container::before,
+  .depoimentos__container::after {
+    transform: scale(0.8);
+  }
+
+  .depoimentos__container::before {
+    top: 1.25rem;
+    left: 1.25rem;
+  }
+
+  .depoimentos__container::after {
+    right: 1.25rem;
+    bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .depoimentos__container::before,
+  .depoimentos__container::after {
+    transform: scale(0.6);
+  }
+
+  .depoimentos__container::before {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .depoimentos__container::after {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
 .depoimentos__container > p {
-  font-size: 2rem;
-  font-style: italic;
-  font-weight: 600;
-  max-width: 26ch;
+  max-width: 22ch;
   margin-bottom: 2rem;
 }
 
-.depoimentos__container > span {
+@media (max-width: 1200px) {
+  .depoimentos__container > p {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .depoimentos__container > p {
+    max-width: initial;
+  }
 }

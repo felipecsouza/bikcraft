@@ -1,4 +1,28 @@
-/* Família 1: Poppins */
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+}
+
+/* ============================= Família 0: Merriweather */
+.font-0 {
+  font:
+    italic 700 2rem/1.5 Merriweather,
+    sans-serif;
+}
+
+@media (max-width: 1200px) {
+  .font-0 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .font-0 {
+    font-size: 20px;
+  }
+}
+
+/* ============================= Família 1: Poppins */
 .font-1-xxl {
   font:
     600 4rem/1.125 "Poppins",
@@ -41,7 +65,7 @@
     sans-serif;
 }
 
-/* Família 2: Roboto */
+/* ============================= Família 2: Roboto */
 .font-2-l {
   font:
     400 1.5rem/1.5 "Roboto",
@@ -72,7 +96,7 @@
     sans-serif;
 }
 
-/* Media Queries */
+/* ============================= Media Queries */
 @media (max-width: 1200px) {
   .font-1-xxl {
     font-size: 3rem;
@@ -100,9 +124,8 @@
   .font-1-xl {
     font-size: 1.25rem;
   }
-}
 
-.uppercase {
-  text-transform: uppercase;
-  letter-spacing: 0.015em;
+  .font-1-l {
+    font-size: 1rem;
+  }
 }
