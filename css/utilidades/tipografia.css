@@ -12,13 +12,19 @@
 
 @media (max-width: 1200px) {
   .font-0 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 800px) {
   .font-0 {
-    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .font-0 {
+    font-size: 1rem;
   }
 }
 
@@ -113,6 +119,10 @@
 
   .font-2-s {
     font-size: 0.875rem;
+  }
+
+  .font-1-l {
+    font-size: 1.25rem;
   }
 }
 

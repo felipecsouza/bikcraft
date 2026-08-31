@@ -18,12 +18,12 @@
 }
 
 .depoimentos__img > img {
+  border-radius: 0;
   height: 100%;
-  max-height: 42.5rem;
   width: 100%;
   object-fit: cover;
+  max-height: 42.5rem;
   object-position: center bottom;
-  border-radius: 0;
   transition: 0.4s ease-in-out;
 }
 
@@ -35,17 +35,22 @@
 
 @media (max-width: 600px) {
   .depoimentos__img {
-    display: none;
+    height: 12.5rem;
+  }
+
+  .depoimentos__img > img {
+    object-position: center center;
   }
 }
 
 .depoimentos__container {
+  padding: 8.75rem;
   height: 100%;
   display: grid;
   align-content: center;
   justify-content: center;
-  padding: 8.75rem;
   position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
@@ -66,24 +71,23 @@
   }
 }
 
-.depoimentos__container::before {
-  content: "";
-  display: inline-block;
-  width: 3.25rem;
-  height: 3.25rem;
-  background-image: url(../../img/grafismos/grafismo-top-left-p.svg);
-  position: absolute;
-  top: 2.5rem;
-  left: 2.5rem;
-}
-
+.depoimentos__container::before,
 .depoimentos__container::after {
   content: "";
   display: inline-block;
   width: 3.25rem;
   height: 3.25rem;
-  background-image: url(../../img/grafismos/grafismo-bottom-right-p.svg);
   position: absolute;
+}
+
+.depoimentos__container::before {
+  background-image: url(../../img/grafismos/grafismo-top-left-p.svg);
+  top: 2.5rem;
+  left: 2.5rem;
+}
+
+.depoimentos__container::after {
+  background-image: url(../../img/grafismos/grafismo-bottom-right-p.svg);
   bottom: 2.5rem;
   right: 2.5rem;
 }
@@ -122,19 +126,50 @@
   }
 }
 
-.depoimentos__container > p {
+.depoimentos__container > blockquote p {
   max-width: 22ch;
   margin-bottom: 2rem;
+  position: relative;
+}
+
+.depoimentos__container > blockquote p::before,
+.depoimentos__container > blockquote p::after {
+  position: absolute;
+  font-size: 8.75rem;
+  line-height: 1;
+  color: var(--p2);
+}
+
+.depoimentos__container > blockquote p::before {
+  content: "\201c";
+  left: -5rem;
+  top: 0;
+}
+
+.depoimentos__container > blockquote p::after {
+  content: "\201d";
+  right: -3rem;
 }
 
 @media (max-width: 1200px) {
-  .depoimentos__container > p {
+  .depoimentos__container > blockquote p {
     margin-bottom: 1rem;
+  }
+
+  .depoimentos__container > blockquote p::before {
+    font-size: 5rem;
+    left: -3.5rem;
+  }
+
+  .depoimentos__container > blockquote p::after {
+    font-size: 5rem;
+    right: -2rem;
   }
 }
 
 @media (max-width: 600px) {
-  .depoimentos__container > p {
+  .depoimentos__container > blockquote p {
     max-width: initial;
+    margin-bottom: 0.5rem;
   }
 }
