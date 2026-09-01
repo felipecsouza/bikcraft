@@ -33,7 +33,6 @@
 }
 
 .seguros__card:hover {
-  /* transform: scale(1.02); */
   transform: translateY(-0.3125rem);
 }
 
@@ -76,34 +75,67 @@
   left: -1.4375rem;
 }
 
-.seguros__prata-btn {
-  background: initial;
-  background-color: var(--c10);
-}
-
-@media (hover: hover) {
-  .seguros__prata-btn:hover {
-    background: initial;
-    background-color: var(--c9);
-  }
-}
-
 @media (max-width: 1000px) {
   .seguros__container {
     gap: 1.25rem;
+  }
+
+  .seguros__card {
+    padding-left: 3rem;
   }
 
   .seguros__card-topo {
     margin-bottom: 1.5rem;
   }
 
-  .seguros__valor {
-    font-size: 24px;
+  .seguros__valor,
+  .seguros__card h3 {
+    font-size: 2rem;
+  }
+
+  .seguros__lista {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .seguros__lista li {
+    font-size: 0.875rem;
+  }
+
+  .seguros__card .btn {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 800px) {
   .seguros__container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .seguros__card {
+    padding: 2rem 1rem 2rem 2.5rem;
+  }
+
+  .seguros__card h3,
+  .seguros__valor {
+    font-size: 1.5rem;
+  }
+
+  .seguros__valor {
+    margin-bottom: -0.1rem;
+  }
+
+  .seguros__card-topo {
+    margin-bottom: 1rem;
+  }
+
+  .seguros__lista {
+    gap: 0.75rem;
+  }
+
+  .seguros__ lista li {
+    font-size: 0.75rem;
   }
 }

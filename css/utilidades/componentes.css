@@ -19,9 +19,19 @@
   cursor: pointer;
 }
 
+.btn.secundario {
+  background: var(--c10);
+  color: var(--c4);
+}
+
 @media (hover: hover) {
   .btn:hover {
     background: var(--g2);
+  }
+
+  .btn.secundario:hover {
+    background: initial;
+    background-color: var(--c9);
   }
 }
 
