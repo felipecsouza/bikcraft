@@ -17,6 +17,7 @@
   letter-spacing: 0.015em;
   text-transform: uppercase;
   cursor: pointer;
+  max-width: max-content;
 }
 
 .btn.secundario {
