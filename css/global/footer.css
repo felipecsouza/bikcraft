@@ -19,26 +19,17 @@
 
 .footer__lista {
   display: grid;
-  gap: 0.625rem;
+  gap: 1rem;
   margin-bottom: 1rem;
-  max-width: 16.25rem;
-}
-
-/* ==============================  TROCAR PSEUDO ELEMENTO POR BORDA NO BOTTOM DO GRID */
-
-.footer__lista.contato :nth-child(2n) {
-  margin-bottom: 2rem;
-  position: relative;
 }
 
 .footer__lista.contato :nth-child(2n)::after {
   content: "";
   display: block;
-  position: absolute;
-  width: 100%;
-  height: 1px;
+  max-width: 16.25rem;
+  height: 2px;
   background-color: var(--c11);
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 
 .footer__lista.redes {
@@ -47,12 +38,14 @@
   margin-bottom: 4rem;
 }
 
-.footer__lista li a {
-  color: inherit;
-}
-
 .footer__copyright {
   display: block;
+}
+
+@media (hover: hover) {
+  .footer__lista li a:hover {
+    color: var(--c3);
+  }
 }
 
 @media (max-width: 1200px) {
@@ -87,6 +80,11 @@
 
   .footer__lista.redes {
     margin-bottom: 0;
+    gap: 1.25rem;
+  }
+
+  .footer__lista.redes img {
+    transform: scale(0.8);
   }
 
   .footer__bg .footer__copyright {

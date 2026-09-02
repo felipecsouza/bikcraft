@@ -1,11 +1,13 @@
+/* Global */
 @import url(./global/global.css);
+@import url(./utilidades/tipografia.css);
+@import url(./utilidades/cores.css);
+
 @import url(./global/header.css);
 @import url(./global/footer.css);
 
 /* Utilidades */
 @import url(./utilidades/componentes.css);
-@import url(./utilidades/tipografia.css);
-@import url(./utilidades/cores.css);
 
 /* Home */
 @import url(./home/main.css);
@@ -14,3 +16,6 @@
 @import url(./home/parceiros.css);
 @import url(./home/depoimentos.css);
 @import url(./home/seguros.css);
+
+/* Termos */
+@import url(./termos/termos.css);

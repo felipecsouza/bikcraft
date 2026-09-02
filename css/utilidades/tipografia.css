@@ -54,6 +54,12 @@
     sans-serif;
 }
 
+.font-1-l-b {
+  font:
+    600 1.5rem/1.5 "Poppins",
+    sans-serif;
+}
+
 .font-1-m {
   font:
     400 1.125rem/1.333 "Poppins",
@@ -88,6 +94,12 @@
 .font-2-l-b {
   font:
     500 1.5rem/1.5 "Roboto",
+    sans-serif;
+}
+
+.font-2-m-a {
+  font:
+    400 1.125rem/1.333 "Roboto",
     sans-serif;
 }
 

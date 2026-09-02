@@ -1,0 +1,42 @@
+.termos {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  max-width: 47.5rem;
+}
+
+.termos h2 {
+  margin-bottom: 1.25rem;
+}
+
+.termos__lista-principal {
+  display: grid;
+  gap: 3rem;
+}
+
+.termos__lista-principal ol {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .termos {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .termos {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .termos h2 {
+    margin-bottom: 1rem;
+  }
+
+  .termos__lista-principal {
+    display: grid;
+    gap: 2rem;
+  }
+}

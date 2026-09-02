@@ -25,6 +25,7 @@
   color: var(--c4);
 }
 
+/* =============================== Medias Queries */
 @media (hover: hover) {
   .btn:hover {
     background: var(--g2);
@@ -45,6 +46,28 @@
 @media (max-width: 37.5rem) {
   .btn {
     padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* ============================= Titulo das Páginas internas */
+.titulo__bg {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  background-color: var(--c11);
+}
+
+.titulo p {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .titulo__bg {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .titulo p {
     font-size: 1rem;
   }
 }
