@@ -9,16 +9,22 @@
   gap: 2.5rem;
 }
 
+.footer__container > a {
+  place-self: start;
+}
+
 .footer__container h3 {
   margin-bottom: 2rem;
 }
 
 .footer__lista {
   display: grid;
-  gap: 10px;
+  gap: 0.625rem;
   margin-bottom: 1rem;
   max-width: 16.25rem;
 }
+
+/* ==============================  TROCAR PSEUDO ELEMENTO POR BORDA NO BOTTOM DO GRID */
 
 .footer__lista.contato :nth-child(2n) {
   margin-bottom: 2rem;
@@ -49,10 +55,30 @@
   display: block;
 }
 
+@media (max-width: 1200px) {
+  .footer__container h3 {
+    margin-bottom: 1.25rem;
+  }
+
+  .footer__lista {
+    gap: 0.5rem;
+    max-width: initial;
+  }
+
+  .footer__lista li {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 600px) {
+  .footer__bg {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   .footer__container {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 2rem;
   }
 
   .footer_container > img {
