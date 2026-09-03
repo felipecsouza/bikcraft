@@ -1,17 +1,28 @@
 #bicicletas .bicicletas__lista {
   padding: 0;
+  flex-direction: column;
+  gap: 7.5rem;
+}
+
+.bike-card.bg-c11 {
+  width: 100%;
+  height: 460px;
+  align-content: center;
+  box-shadow: inset 220px 0 0 0 rgba(255, 255, 255, 100);
 }
 
 .bike-card__img {
   position: relative;
   border-radius: 5px;
   height: 100%;
+  overflow: hidden;
 }
 
 .bike-card__img img {
   height: 100%;
   object-fit: cover;
   object-position: right center;
+  transition: 0.5s ease-out;
 }
 
 .bike-card__img span {
@@ -23,6 +34,7 @@
   padding: 0.5rem;
   padding-right: 1rem;
   border-radius: 5px 0 0 5px;
+  z-index: 1;
 }
 
 .bike-card__container {
@@ -55,6 +67,8 @@
   height: 0.5rem;
   background-color: var(--p2);
   margin-bottom: 1rem;
+  transform-origin: left;
+  transition: 0.3s ease-out;
 }
 
 .bike-card p {
@@ -101,6 +115,19 @@
   background-image: url(../../img/icones/seta-2.svg);
 }
 
+/* ================================= Hover */
+
+@media (hover: hover) {
+  .bike-card__img:hover img {
+    transform: scale(1.05);
+  }
+
+  .bike-card:hover h2::before {
+    transform: scaleX(3);
+  }
+}
+
+/* ================================= Media Queries */
 @media (max-width: 1000px) {
   .bike-card__container {
     gap: 1.25rem;
@@ -169,7 +196,13 @@
     border-radius: 5px 5px 0 0;
   }
 
-  .bike-card h2:before {
+  .bike-card__img span {
+    font-size: 16px;
+    top: 0;
+    border-radius: 0 0 0 5px;
+  }
+
+  .bike-card h2::before {
     margin-bottom: 0;
   }
 
