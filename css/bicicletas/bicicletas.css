@@ -1,0 +1,182 @@
+#bicicletas .bicicletas__lista {
+  padding: 0;
+}
+
+.bike-card__img {
+  position: relative;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.bike-card__img img {
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.bike-card__img span {
+  position: absolute;
+  display: inline-block;
+  background-color: var(--c12);
+  top: 1.25rem;
+  right: 0;
+  padding: 0.5rem;
+  padding-right: 1rem;
+  border-radius: 5px 0 0 5px;
+}
+
+.bike-card__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: end;
+  position: relative;
+}
+
+.bike-card__container::after {
+  content: "";
+  position: absolute;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../../img/grafismos/grafismo-top-right.svg);
+  top: 0;
+  right: 0;
+  opacity: 0.2;
+}
+
+.bike-card h2 {
+  margin-bottom: 1.25rem;
+}
+
+.bike-card h2::before {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.5rem;
+  background-color: var(--p2);
+  margin-bottom: 1rem;
+}
+
+.bike-card p {
+  margin-bottom: 2rem;
+  max-width: 45ch;
+}
+
+.bike-card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1.25rem;
+}
+
+.bike-card__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bike-card__lista li {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.bike-card__lista img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.bike-card__bottom a.btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: max-content;
+}
+
+.bike-card__bottom a.btn::after {
+  content: "";
+  display: inline-block;
+  width: 1.125rem;
+  height: 0.625rem;
+  background-image: url(../../img/icones/seta-2.svg);
+}
+
+@media (max-width: 1000px) {
+  .bike-card__container {
+    gap: 1.25rem;
+  }
+
+  .bike-card__container::after {
+    transform: scale(0.8);
+  }
+
+  .bike-card p {
+    font-size: 0.875rem;
+  }
+
+  .bike-card__lista {
+    gap: 0.625rem;
+  }
+
+  .bike-card__lista li {
+    font-size: 0.875rem;
+    gap: 0.625rem;
+  }
+
+  .bike-card__bottom a.btn {
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    padding: 0.625rem 1.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .bike-card p {
+    margin-bottom: 1rem;
+  }
+
+  .bike-card__bottom {
+    flex-direction: column;
+  }
+
+  .bike-card__lista {
+    flex-direction: initial;
+    flex-wrap: wrap;
+  }
+
+  .bike-card__bottom a.btn {
+    align-self: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .bike-card__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .bike-card__container::after {
+    display: none;
+  }
+
+  .bike-card__info {
+    background-color: var(--c2);
+    padding: 20px;
+  }
+
+  .bike-card__img,
+  .bike-card__img img {
+    border-radius: 5px 5px 0 0;
+  }
+
+  .bike-card h2:before {
+    margin-bottom: 0;
+  }
+
+  .bike-card h2 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
