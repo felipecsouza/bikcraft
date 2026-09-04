@@ -2,13 +2,21 @@
   padding: 0;
   flex-direction: column;
   gap: 7.5rem;
+  max-width: none;
 }
 
-.bike-card.bg-c11 {
-  width: 100%;
-  height: 460px;
-  align-content: center;
-  box-shadow: inset 220px 0 0 0 rgba(255, 255, 255, 100);
+.bike-card.destaque {
+  position: relative;
+}
+
+.bike-card.destaque::before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: calc(100% + 120px);
+  right: 0;
+  top: -60px;
+  background-color: var(--c11);
 }
 
 .bike-card__img {
@@ -22,7 +30,7 @@
   height: 100%;
   object-fit: cover;
   object-position: right center;
-  transition: 0.5s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .bike-card__img span {
@@ -122,12 +130,18 @@
     transform: scale(1.05);
   }
 
-  .bike-card:hover h2::before {
+  .bike-card__container:hover h2::before {
     transform: scaleX(3);
   }
 }
 
 /* ================================= Media Queries */
+@media (min-width: 2000px) {
+  .bike-card.destaque::before {
+    width: 65%;
+  }
+}
+
 @media (max-width: 1000px) {
   .bike-card__container {
     gap: 1.25rem;
@@ -171,12 +185,24 @@
     flex-wrap: wrap;
   }
 
+  .bike-card__lista img {
+    transform: scale(0.6);
+  }
+
+  .bike-card__lista li {
+    gap: 0;
+  }
+
   .bike-card__bottom a.btn {
     align-self: start;
   }
 }
 
 @media (max-width: 600px) {
+  #bicicletas .bicicletas__lista {
+    gap: 1.25rem;
+  }
+
   .bike-card__container {
     grid-template-columns: 1fr;
     gap: 0;
@@ -186,9 +212,24 @@
     display: none;
   }
 
+  .bike-card.destaque::before {
+    display: none;
+  }
+
   .bike-card__info {
-    background-color: var(--c2);
-    padding: 20px;
+    background-color: var(--c1);
+    padding: 1.25rem;
+    border: 2px solid var(--c2);
+    border-radius: 0 0 5px 5px;
+  }
+
+  .bike-card.destaque .bike-card__info {
+    border: 2px solid var(--c10);
+  }
+
+  .bike-card.destaque .bike-card__info {
+    background-color: var(--c11);
+    padding: 1.25rem;
   }
 
   .bike-card__img,
@@ -211,5 +252,9 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+  }
+
+  .bike-card__lista {
+    gap: 4px;
   }
 }
