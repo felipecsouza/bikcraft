@@ -1,22 +1,52 @@
+#bicicletas.bicicletas {
+  padding-bottom: 3.75rem;
+}
+
 #bicicletas .bicicletas__lista {
   padding: 0;
   flex-direction: column;
   gap: 7.5rem;
   max-width: none;
+  padding-bottom: 3.75rem;
 }
 
-.bike-card.destaque {
+.bicicletas__lista .bike-card:nth-child(2n),
+.bicicletas__lista .bike-card:nth-child(2n) ul {
   position: relative;
+  color: var(--c5);
 }
 
-.bike-card.destaque::before {
+.bicicletas__lista .bike-card:nth-child(2n) h2 {
+  color: var(--c0);
+}
+
+.bicicletas__lista .bike-card:nth-child(2n)::before {
   content: "";
   position: absolute;
   width: 75%;
-  height: calc(100% + 120px);
+  height: calc(100% + 7.5rem);
   right: 0;
-  top: -60px;
+  top: -3.75rem;
   background-color: var(--c11);
+}
+
+.bike-card__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: end;
+  position: relative;
+}
+
+.bike-card__container::after {
+  content: "";
+  position: absolute;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../../img/grafismos/grafismo-top-right.svg);
+  top: 0;
+  right: 0;
+  opacity: 0.2;
 }
 
 .bike-card__img {
@@ -43,25 +73,6 @@
   padding-right: 1rem;
   border-radius: 5px 0 0 5px;
   z-index: 1;
-}
-
-.bike-card__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  align-items: end;
-  position: relative;
-}
-
-.bike-card__container::after {
-  content: "";
-  position: absolute;
-  width: 3.25rem;
-  height: 3.25rem;
-  background-image: url(../../img/grafismos/grafismo-top-right.svg);
-  top: 0;
-  right: 0;
-  opacity: 0.2;
 }
 
 .bike-card h2 {
@@ -113,6 +124,7 @@
   align-items: center;
   gap: 1rem;
   max-width: max-content;
+  padding-right: 1.5rem;
 }
 
 .bike-card__bottom a.btn::after {
@@ -121,6 +133,7 @@
   width: 1.125rem;
   height: 0.625rem;
   background-image: url(../../img/icones/seta-2.svg);
+  transition: 0.2s ease-out;
 }
 
 /* ================================= Hover */
@@ -133,11 +146,15 @@
   .bike-card__container:hover h2::before {
     transform: scaleX(3);
   }
+
+  .bike-card__bottom a.btn:hover::after {
+    transform: translateX(0.25rem);
+  }
 }
 
 /* ================================= Media Queries */
 @media (min-width: 2000px) {
-  .bike-card.destaque::before {
+  .bicicletas__lista .bike-card:nth-child(2n)::before {
     width: 65%;
   }
 }
@@ -212,7 +229,7 @@
     display: none;
   }
 
-  .bike-card.destaque::before {
+  .bicicletas__lista .bike-card:nth-child(2n)::before {
     display: none;
   }
 
@@ -223,11 +240,11 @@
     border-radius: 0 0 5px 5px;
   }
 
-  .bike-card.destaque .bike-card__info {
+  .bicicletas__lista .bike-card:nth-child(2n) .bike-card__info {
     border: 2px solid var(--c10);
   }
 
-  .bike-card.destaque .bike-card__info {
+  .bicicletas__lista .bike-card:nth-child(2n) .bike-card__info {
     background-color: var(--c11);
     padding: 1.25rem;
   }
