@@ -1,0 +1,15 @@
+#seguros .seguros {
+  padding-top: 3.75rem;
+}
+
+@media (max-width: 1000px) {
+  #seguros .seguros {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #seguros .seguros {
+    padding-top: 0;
+  }
+}

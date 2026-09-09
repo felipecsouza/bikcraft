@@ -50,10 +50,15 @@
 }
 
 .bike-card__img {
-  position: relative;
   border-radius: 5px;
   height: 100%;
   overflow: hidden;
+  display: grid;
+}
+
+.bike-card__img img,
+.bike-card__img span {
+  grid-area: 1/1;
 }
 
 .bike-card__img img {
@@ -64,14 +69,13 @@
 }
 
 .bike-card__img span {
-  position: absolute;
   display: inline-block;
   background-color: var(--c12);
-  top: 1.25rem;
-  right: 0;
   padding: 0.5rem;
   padding-right: 1rem;
   border-radius: 5px 0 0 5px;
+  place-self: start end;
+  margin-top: 20px;
   z-index: 1;
 }
 
@@ -200,6 +204,7 @@
   .bike-card__lista {
     flex-direction: initial;
     flex-wrap: wrap;
+    gap: 0.3125rem 0.625rem;
   }
 
   .bike-card__lista img {
@@ -242,11 +247,7 @@
 
   .bicicletas__lista .bike-card:nth-child(2n) .bike-card__info {
     border: 2px solid var(--c10);
-  }
-
-  .bicicletas__lista .bike-card:nth-child(2n) .bike-card__info {
     background-color: var(--c11);
-    padding: 1.25rem;
   }
 
   .bike-card__img,
@@ -256,8 +257,8 @@
 
   .bike-card__img span {
     font-size: 16px;
-    top: 0;
     border-radius: 0 0 0 5px;
+    margin-top: 0;
   }
 
   .bike-card h2::before {
