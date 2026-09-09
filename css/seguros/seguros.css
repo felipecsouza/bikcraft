@@ -5,6 +5,17 @@
 .vantagens {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
+  position: relative;
+}
+
+.vantagens::before {
+ content: "";
+  position: absolute;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../../img/grafismos/grafismo-bottom-left.svg);
+  left: 2.5rem;
+  bottom: 2.5rem;
 }
 
 .vantagens h2 {
@@ -41,6 +52,18 @@
 
 .perguntas h2 {
   margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.perguntas h2::after {
+  content: "";
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../../img/grafismos/grafismo-bottom-left.svg);
+  left: 2.5rem;
+  bottom: 2.5rem;
+  margin-left: auto;
 }
 
 .perguntas__lista > li:nth-child(odd) {
@@ -87,6 +110,21 @@
   #seguros .seguros {
     padding-top: 1rem;
   }
+
+  .vantagens {
+    padding-top: 4rem;
+  }
+  
+  .perguntas {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .perguntas h2 {
+  margin-bottom: 2.5rem;
+}
+
+
 }
 
 @media (max-width: 800px) {
@@ -98,6 +136,9 @@
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+
+  .vantagens::before {
+    display: none;}
 
   .vantagens h2 {
     margin-bottom: 2rem;
@@ -120,6 +161,9 @@
   .perguntas h2 {
     margin-bottom: 2rem;
   }
+  .perguntas h2::after {
+    transform: scale(.8);
+  }
 
   .perguntas__lista li {
     gap: 0.5rem;
@@ -127,6 +171,15 @@
 
   .perguntas__lista li > p {
     font-size: 0.875rem;
+  }
+}
+@media (max-width: 600px) {
+  .perguntas h2 {
+    display: inline-block;
+  }
+
+  .perguntas h2::after {
+    display: none;
   }
 }
 
