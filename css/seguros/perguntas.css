@@ -1,0 +1,127 @@
+.perguntas {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.perguntas h2 {
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.perguntas h2::after {
+  content: "";
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../../img/grafismos/grafismo-bottom-left.svg);
+  left: 2.5rem;
+  bottom: 2.5rem;
+  margin-left: auto;
+}
+
+.perguntas__lista > li:nth-child(odd) {
+  background-color: var(--c1);
+  border-radius: 5px;
+}
+
+.perguntas__lista > li {
+  padding: 1.25rem 2.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr max-content;
+}
+
+.perguntas__lista > li > img {
+  place-self: center;
+}
+
+.perguntas__lista > li > p {
+  grid-column: 1/-1;
+}
+
+.perguntas__lista > li > h3 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: 0.3s ease-out;
+}
+
+.perguntas__lista > li > h3::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -1.25rem;
+  width: 0.75rem;
+  height: 0.5rem;
+  background-color: var(--p2);
+  transition: 0.3s ease-out;
+  transform-origin: right;
+}
+
+/* =============================== Media Queries */
+@media (max-width: 1000px) {
+  .perguntas {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .perguntas h2 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .perguntas {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .perguntas h2 {
+    margin-bottom: 2rem;
+  }
+  .perguntas h2::after {
+    transform: scale(0.8);
+  }
+
+  .perguntas__lista li {
+    gap: 0.5rem;
+  }
+
+  .perguntas__lista li > p {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 600px) {
+  .perguntas h2 {
+    display: inline-block;
+  }
+
+  .perguntas h2::after {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .perguntas {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .perguntas h2 {
+    margin-bottom: 1rem;
+  }
+
+  .perguntas__lista li > h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (hover: hover) {
+  .perguntas__lista li:hover h3::before {
+    transform: scaleX(2);
+  }
+
+  .perguntas__lista li:hover h3 {
+    transform: translateX(0.75rem);
+  }
+}

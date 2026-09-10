@@ -4,6 +4,10 @@
   position: relative;
 }
 
+#seguros .seguros {
+  padding-top: 3.75rem;
+}
+
 .seguros::before {
   content: "";
   position: absolute;

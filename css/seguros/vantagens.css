@@ -1,0 +1,84 @@
+.vantagens {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  position: relative;
+}
+
+.vantagens::before {
+  content: "";
+  position: absolute;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../../img/grafismos/grafismo-bottom-left.svg);
+  left: 2.5rem;
+  bottom: 2.5rem;
+}
+
+.vantagens h2 {
+  margin-bottom: 3.75rem;
+}
+
+.vantagens__lista {
+  display: grid;
+  gap: 2.5rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.vantagens__lista > li {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.vantagens__lista img {
+  width: 2rem;
+  height: auto;
+}
+
+.vantagens__lista-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* =============================== Media Queries */
+@media (max-width: 1000px) {
+  .vantagens {
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .vantagens {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .vantagens::before {
+    display: none;
+  }
+
+  .vantagens h2 {
+    margin-bottom: 2rem;
+  }
+
+  .vantagens__lista-item {
+    flex-direction: initial;
+    align-items: center;
+  }
+
+  .vantagens__lista-item > img {
+    width: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .vantagens__lista {
+    grid-template-columns: initial;
+    gap: 1.5rem;
+  }
+
+  .vantagens__lista li > p {
+    font-size: 0.875rem;
+  }
+}
