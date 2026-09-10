@@ -13,49 +13,53 @@
   content: "";
   width: 3.25rem;
   height: 3.25rem;
-  background-image: url(../../img/grafismos/grafismo-bottom-left.svg);
-  left: 2.5rem;
-  bottom: 2.5rem;
+  background-image: url(../../img/grafismos/grafismo-top-right.svg);
+  opacity: 0.2;
   margin-left: auto;
 }
 
-.perguntas__lista > li:nth-child(odd) {
+.perguntas__lista > div:nth-child(odd) {
   background-color: var(--c1);
   border-radius: 5px;
 }
 
-.perguntas__lista > li {
+.perguntas__lista > div {
   padding: 1.25rem 2.5rem;
+  cursor: pointer;
+}
+
+.perguntas__lista > div > dt {
+  /* display: flex; */
   display: grid;
-  gap: 1rem;
   grid-template-columns: 1fr max-content;
-}
-
-.perguntas__lista > li > img {
-  place-self: center;
-}
-
-.perguntas__lista > li > p {
-  grid-column: 1/-1;
-}
-
-.perguntas__lista > li > h3 {
-  display: flex;
+  gap: 1rem;
   align-items: center;
   position: relative;
-  transition: 0.3s ease-out;
+  transition: 0.3s ease-in-out;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
-.perguntas__lista > li > h3::before {
+.perguntas__lista > div > dt::before {
   content: "";
   display: inline-block;
-  position: absolute;
-  left: -1.25rem;
   width: 0.75rem;
   height: 0.5rem;
+  left: -1.25rem;
+  position: absolute;
   background-color: var(--p2);
-  transition: 0.3s ease-out;
+  transition: 0.3s ease-in-out;
   transform-origin: right;
+}
+
+.perguntas__lista > div > dt::after {
+  content: "";
+  display: inline-block;
+  width: 0.8125rem;
+  height: 0.3125rem;
+  background-image: url(../../img/icones/seta.svg);
+  justify-self: end;
+  transition: 0.3s ease-in-out;
 }
 
 /* =============================== Media Queries */
@@ -71,11 +75,6 @@
 }
 
 @media (max-width: 800px) {
-  .perguntas {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
   .perguntas h2 {
     margin-bottom: 2rem;
   }
@@ -83,11 +82,11 @@
     transform: scale(0.8);
   }
 
-  .perguntas__lista li {
-    gap: 0.5rem;
+  .perguntas__lista > div > dt {
+    margin-bottom: 0.5rem;
   }
 
-  .perguntas__lista li > p {
+  .perguntas__lista div > dd {
     font-size: 0.875rem;
   }
 }
@@ -111,17 +110,21 @@
     margin-bottom: 1rem;
   }
 
-  .perguntas__lista li > h3 {
+  .perguntas__lista div > dt {
     font-size: 1rem;
   }
 }
 
 @media (hover: hover) {
-  .perguntas__lista li:hover h3::before {
+  .perguntas__lista div:hover dt::before {
     transform: scaleX(2);
   }
 
-  .perguntas__lista li:hover h3 {
+  .perguntas__lista div:hover dt {
     transform: translateX(0.75rem);
+  }
+
+  .perguntas__lista div:hover dt::after {
+    transform: translateX(-0.75rem) rotate(180deg);
   }
 }
