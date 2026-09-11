@@ -1,0 +1,22 @@
+.nimbus__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.nimbus__fotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  height: 42rem;
+}
+
+.nimbus__fotos div {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.nimbus__fotos div:first-child {
+  grid-column: 1/-1;
+}
