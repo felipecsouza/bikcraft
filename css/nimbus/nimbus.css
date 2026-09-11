@@ -8,13 +8,23 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
-  height: 42rem;
+  height: 4auto;
 }
+object-position: center;
 
 .nimbus__fotos div {
+  max-height: auto;
+  border-radius: 5px;
+  object-position: center;
+  overflow: hidden;
+}
+
+.nimbus__fotos div img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .nimbus__fotos div:first-child {
