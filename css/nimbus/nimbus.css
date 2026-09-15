@@ -6,19 +6,20 @@
 }
 
 .nimbus__fotos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
-  height: 4auto;
   align-content: start;
 }
 
 .nimbus__fotos div {
+  flex: 1;
+  min-width: 200px;
   border-radius: 5px;
 }
 
 .nimbus__fotos div:first-child {
-  grid-column: 1/-1;
+  min-width: 100%;
 }
 
 .nimbus__infos {
@@ -57,12 +58,16 @@
   gap: 0.75rem;
 }
 
-.vantagens__lista {
+.vantagens__lista,
+.ficha-tecnica__lista {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   background-color: var(--c12);
   padding: 2rem;
   border-radius: 5px;
+}
+
+.vantagens__lista {
+  grid-template-columns: 1fr 1fr;
 }
 
 .vantagens__lista > li > img {
@@ -72,13 +77,6 @@
 
 .ficha-tecnica > h2 {
   margin-bottom: 0.75rem;
-}
-
-.ficha-tecnica__lista {
-  display: grid;
-  background-color: var(--c12);
-  padding: 2rem;
-  border-radius: 5px;
 }
 
 .ficha-tecnica__lista > div {
@@ -108,6 +106,10 @@
 }
 
 @media (max-width: 800px) {
+  .nimbus__container {
+    gap: 1.25rem;
+  }
+
   .nimbus__fotos {
     gap: 1rem;
   }
@@ -124,5 +126,9 @@
 @media (max-width: 600px) {
   .nimbus__container {
     grid-template-columns: 1fr;
+  }
+
+  .nimbus__fotos {
+    grid-row: 2;
   }
 }
