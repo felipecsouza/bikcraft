@@ -99,14 +99,18 @@
   background-color: var(--p1);
 }
 
+.bg-c0 {
+  background-color: var(--c0);
+}
+
 .bg-c12 {
   background-color: var(--c12);
 }
 
-.bg-c11 {
-  background-color: var(--c11);
-}
-
 .bg-c10 {
   background-color: var(--c10);
+}
+
+.bg-c11 {
+  background-color: var(--c11);
 }

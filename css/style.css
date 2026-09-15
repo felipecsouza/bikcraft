@@ -32,3 +32,6 @@
 @import url(./nimbus/nimbus.css);
 @import url(./nimbus/escolha.css);
 @import url(./nimbus/seguro.css);
+
+/* Contato */
+@import url(./contato/contato.css);
