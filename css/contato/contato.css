@@ -1,5 +1,5 @@
 .contato-bg {
-  box-shadow: inset 0 -16.25rem 0 0 var(--c0);
+  box-shadow: inset 0 -16.25rem 0 0 var(--c1);
 }
 
 .contato__container {
@@ -8,14 +8,19 @@
 }
 
 .contato__listas {
-  padding-top: 3.75rem;
-  padding-left: 3.125rem;
-  padding-bottom: 5.25rem;
-  display: grid;
-  position: relative;
+  border-radius: 5px 0 0 5px;
 }
 
-.contato__listas::before {
+.contato__listas,
+.contato__form {
+  padding: 3.75rem;
+  display: grid;
+  position: relative;
+  align-content: start;
+}
+
+.contato__listas::before,
+.contato__form::before {
   content: "";
   display: inline-block;
   width: 3.25rem;
@@ -37,6 +42,7 @@
   display: grid;
   grid-template-columns: max-content auto;
   align-items: center;
+  align-content: start;
   gap: 0 0.5rem;
 }
 
@@ -58,4 +64,114 @@
 .contato__lista-redes {
   display: flex;
   gap: 2rem;
+}
+
+.contato__form {
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  align-content: start;
+  border-radius: 0 5px 5px 0;
+}
+
+.contato__form div {
+  display: grid;
+  gap: 0.25rem;
+}
+.contato__form input,
+.contato__form textarea {
+  width: 100%;
+  background-color: var(--c1);
+  border-radius: 5px;
+  border: 1px solid var(--c2);
+  padding: 0.75rem;
+  resize: none;
+}
+
+.contato__form input::placeholder,
+.contato__form textarea::placeholder {
+  font: var(--font-2-s);
+  color: var(--c7);
+}
+
+.contato__form div:nth-child(n + 3) {
+  grid-column: 1/-1;
+}
+
+.contato__form button {
+  justify-self: start;
+  max-width: max-content;
+  grid-column: 1/-1;
+}
+
+/* ============================================ Media Queries */
+@media (max-width: 800px) {
+  .contato__listas,
+  .contato__form {
+    padding: 2rem;
+  }
+
+  .contato__form {
+    grid-template-columns: 1fr;
+  }
+
+  .contato__form::before {
+    display: none;
+  }
+
+  .contato__form button {
+    justify-self: stretch;
+    max-width: 100%;
+    font-size: 0.875rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .contato__container {
+    grid-template-columns: 1fr;
+  }
+
+  .contato__listas {
+    border-radius: 0 0 5px 5px;
+  }
+
+  .contato__form {
+    border-radius: 5px 5px 0 0;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .contato__listas h3,
+  .contato__lista {
+    margin-bottom: 2rem;
+  }
+
+  .contato__lista li:nth-child(4),
+  .contato__lista li:nth-child(7) {
+    margin-bottom: 1rem;
+  }
+
+  .contato__lista li {
+    font-size: 0.875rem;
+  }
+
+  .contato__lista-redes {
+    gap: 1rem;
+  }
+
+  .contato__lista-redes img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .contato__listas::before {
+    display: none;
+  }
+
+  .contato__form textarea {
+    height: 7rem;
+  }
 }
