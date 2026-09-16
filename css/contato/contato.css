@@ -36,7 +36,7 @@
   margin-bottom: 3.75rem;
 }
 
-.contato__lista {
+.contato__endereco {
   font-weight: 400;
   line-height: 2;
   margin-bottom: 3.75rem;
@@ -47,26 +47,27 @@
   gap: 0 0.5rem;
 }
 
-.contato__lista li:nth-child(4),
-.contato__lista li:nth-child(7) {
+.contato__endereco p:nth-child(4),
+.contato__endereco p:nth-child(7) {
   margin-bottom: 2rem;
 }
 
-.contato__lista li {
+.contato__endereco p {
   grid-column: 2;
 }
 
-.contato__lista img {
+.contato__endereco img {
   grid-column: 1;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.contato__lista-redes {
+.contato__redes {
   display: flex;
   gap: 2rem;
 }
 
+/* ======================================== Formulário */
 .contato__form {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -146,24 +147,24 @@
 
 @media (max-width: 400px) {
   .contato__listas h3,
-  .contato__lista {
+  .contato__endereco {
     margin-bottom: 2rem;
   }
 
-  .contato__lista li:nth-child(4),
-  .contato__lista li:nth-child(7) {
+  .contato__endereco p:nth-child(4),
+  .contato__endereco p:nth-child(7) {
     margin-bottom: 1rem;
   }
 
-  .contato__lista li {
+  .contato__endereco p {
     font-size: 0.875rem;
   }
 
-  .contato__lista-redes {
+  .contato__redes {
     gap: 1rem;
   }
 
-  .contato__lista-redes img {
+  .contato__redes img {
     width: 1.5rem;
     height: 1.5rem;
   }

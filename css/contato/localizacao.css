@@ -37,9 +37,6 @@
   content: "";
   display: inline-block;
   grid-column: 1;
-}
-
-.localizacao__card-info::before {
   width: 0.75rem;
   height: 0.5rem;
   background-color: var(--p2);
