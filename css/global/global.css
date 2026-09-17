@@ -36,9 +36,14 @@ img {
   max-width: 100%;
 }
 input,
-button {
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
   font: inherit;
 }
+
 html {
   scroll-behavior: smooth;
 }

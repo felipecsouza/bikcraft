@@ -11,8 +11,18 @@
   grid-column: 1/-1;
 }
 
-.localizacao__card > img {
+.localizacao__card div {
   border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.localizacao__card img {
+  border-radius: 5px 5px 0 0;
+  transition: 0.3s ease-in-out;
+}
+
+.localizacao__card h3 {
+  transition: 0.3s ease-in-out;
 }
 
 .localizacao__card-info {
@@ -40,6 +50,8 @@
   width: 0.75rem;
   height: 0.5rem;
   background-color: var(--p2);
+  transition: 0.3s ease-in-out;
+  transform-origin: left;
 }
 
 .localizacao__card-info ul {
@@ -91,5 +103,21 @@
 
   .localizacao__card-listas {
     width: 70%;
+  }
+}
+
+/* ======================================== Hover */
+
+@media (hover: hover) {
+  .localizacao__card:hover img {
+    scale: 1.05;
+  }
+
+  .localizacao__card:hover .localizacao__card-info::before {
+    scale: 2 1;
+  }
+
+  .localizacao__card:hover h3 {
+    translate: 0.75rem;
   }
 }
