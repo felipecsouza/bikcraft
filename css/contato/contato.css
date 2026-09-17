@@ -11,10 +11,9 @@
   border-radius: 5px 0 0 5px;
 }
 
-.contato__listas,
-.contato__form {
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+.contato__listas {
   padding: 3.75rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   display: grid;
   position: relative;
   align-content: start;
@@ -32,7 +31,7 @@
   bottom: 2.5rem;
 }
 
-.contato__listas h3 {
+.contato__listas h2 {
   margin-bottom: 3.75rem;
 }
 
@@ -49,11 +48,13 @@
   gap: 0 0.5rem;
 }
 
-/* ======================================= espaçamento nos contatos, deletar  */
 .contato__endereco,
-.contato__emails,
 .contato__emails a:nth-child(3) {
   margin-bottom: 2rem;
+}
+
+.contato__emails {
+  margin-bottom: 3.75rem;
 }
 
 .contato__endereco p,
@@ -72,66 +73,10 @@
   gap: 2rem;
 }
 
-/* ======================================== Formulário */
-.contato__form {
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: start;
-  align-content: start;
-  border-radius: 0 5px 5px 0;
-}
-
-.contato__form div {
-  display: grid;
-  gap: 0.25rem;
-}
-.contato__form input,
-.contato__form textarea {
-  width: 100%;
-  background-color: var(--c1);
-  border-radius: 5px;
-  border: 1px solid var(--c2);
-  padding: 0.75rem;
-  resize: none;
-}
-
-.contato__form input::placeholder,
-.contato__form textarea::placeholder {
-  font: var(--font-2-s);
-  color: var(--c7);
-}
-
-.contato__form div:nth-child(n + 3) {
-  grid-column: 1/-1;
-}
-
-.contato__form button {
-  justify-self: start;
-  max-width: max-content;
-  grid-column: 1/-1;
-}
-
 /* ============================================ Media Queries */
 @media (max-width: 800px) {
-  .contato__listas,
-  .contato__form {
+  .contato__listas {
     padding: 2rem;
-  }
-
-  .contato__form {
-    grid-template-columns: 1fr;
-  }
-
-  .contato__form::before {
-    display: none;
-  }
-
-  .contato__form button {
-    justify-self: stretch;
-    max-width: 100%;
-    font-size: 0.875rem;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -139,29 +84,21 @@
   .contato__container {
     grid-template-columns: 1fr;
   }
-
-  .contato__listas {
-    border-radius: 0 0 5px 5px;
-  }
-
-  .contato__form {
-    border-radius: 5px 5px 0 0;
-    grid-row: 1;
-  }
 }
 
 @media (max-width: 400px) {
   .contato__listas h3,
-  .contato__endereco {
+  .contato__emails {
     margin-bottom: 2rem;
   }
 
-  .contato__endereco p:nth-child(4),
-  .contato__endereco p:nth-child(7) {
+  .contato__endereco,
+  .contato__emails a:nth-child(3) {
     margin-bottom: 1rem;
   }
 
-  .contato__endereco p {
+  .contato__endereco p,
+  .contato__emails a {
     font-size: 0.875rem;
   }
 
@@ -176,10 +113,6 @@
 
   .contato__listas::before {
     display: none;
-  }
-
-  .contato__form textarea {
-    height: 7rem;
   }
 }
 
