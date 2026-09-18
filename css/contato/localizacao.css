@@ -54,7 +54,7 @@
   transform-origin: left;
 }
 
-.localizacao__card-info ul {
+.localizacao__card-listas div {
   padding: 0.75rem;
   border-left: 2px solid var(--c2);
 }
@@ -62,15 +62,15 @@
 .localizacao__card-listas {
   grid-column: 2;
   display: flex;
-  width: 80%;
+  width: 90%;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.localizacao__card-listas ul {
+.localizacao__card-listas div {
   display: grid;
   gap: 0.5rem;
-  min-width: 8.75rem;
+  min-width: 20ch;
 }
 
 /* ================================= Media Queries */
@@ -119,5 +119,9 @@
 
   .localizacao__card:hover h3 {
     translate: 0.75rem;
+  }
+
+  .localizacao__card-listas a:hover {
+    font-weight: 700;
   }
 }
