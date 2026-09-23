@@ -2,6 +2,48 @@
   background: linear-gradient(var(--c11) 600px, var(--c1) 0);
 }
 
-label {
-  color: #fff;
+.orcamento {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  padding-bottom: 120px;
+}
+
+.orcamento h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.orcamento h2::before {
+  content: "";
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.5rem;
+  background-color: var(--p2);
+  position: absolute;
+  left: -12px;
+}
+
+.orcamento__produto,
+.orcamento__dados {
+  padding: 60px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.orcamento__produto {
+  grid-template-columns: 1fr;
+  border-radius: 5px 0 0 5px;
+  gap: 1.25rem;
+}
+
+.orcamento__dados {
+  background-color: var(--c0);
+}
+
+.orcamento__termos {
+  display: flex;
+}
+
+.orcamento__termos a {
+  text-decoration: underline;
 }

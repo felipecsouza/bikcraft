@@ -27,7 +27,8 @@ ul,
 ol {
   list-style: none;
 }
-a {
+a,
+label {
   text-decoration: none;
   color: inherit;
 }
