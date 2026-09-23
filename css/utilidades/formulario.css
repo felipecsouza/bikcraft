@@ -16,9 +16,9 @@
   grid-column: 1/-1;
 }
 
-.form div {
-  display: grid;
-  gap: 0.25rem;
+.form div label:has(+ input) {
+  display: inline-block;
+  margin-bottom: 0.25rem;
 }
 
 .form input[type="text"],
