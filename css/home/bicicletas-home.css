@@ -51,6 +51,8 @@
 
 .bicicletas__img-wrapper > img {
   transition: 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
 .bicicletas__info > h3 {
@@ -88,7 +90,7 @@
 
 @media (max-width: 800px) {
   .bicicletas {
-    padding: 3.75rem 0;
+    padding: 7.5rem 0;
   }
 
   .bicicletas__titulo {

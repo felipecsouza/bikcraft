@@ -9,6 +9,7 @@
   <meta name="description" content="Bicicletas elétricas de alta precisão e qualidade,  feitas sob medida para o cliente. Explore o mundo na sua velocidade com a Bikcraft.">
 
   <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./css/style.css" as="style">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,7 @@
     <div class="header__container">
 
       <a href="./" aria-label="Página inicial da Bikcraft">
-        <img src="./img/bikcraft.svg" alt="Logo Bikcraft">
+        <img src="./img/bikcraft.svg" width="136" height="32" alt="Logo Bikcraft">
       </a>
 
       <nav aria-label="Principal">
@@ -46,9 +47,10 @@
         <a class="btn" href="./bicicletas.html">selecione a sua</a>
       </div>
 
-      <div class="main__img">
-        <img src="./img/fotos/img-intro.jpg" alt="Foto da Bicicleta Nimbus Preta">
-      </div>
+      <picture class="main__img">
+        <source media="(max-width: 1200px)" srcset="./img/bicicletas/nimbus.jpg">
+        <img src="./img/fotos/img-intro.jpg" width="710" height="802" alt="Foto da Bicicleta Nimbus Preta">
+      </picture>
 
     </div>
   </main>
@@ -60,7 +62,7 @@
       <li class="bicicletas__card">
         <a class="bicicletas__card-link" href="./bicicletas/magic.html">
           <div class="bicicletas__img-wrapper">
-            <img src="./img/bicicletas/magic-home.jpg" alt="Bicicleta Magic Might Preta">
+            <img src="./img/bicicletas/magic-home.jpg" width="920" height="1040" alt="Bicicleta Magic Might Preta">
           </div>
           <div class="bicicletas__info">
             <h3 class="font-1-xl cor-11">Magic Might</h3>
@@ -72,7 +74,7 @@
       <li class="bicicletas__card">
         <a class="bicicletas__card-link" href="./bicicletas/nimbus.html">
           <div class="bicicletas__img-wrapper">
-            <img src="./img/bicicletas/nimbus-home.jpg" alt="Bicicleta Nimbus Strak Preta">
+            <img src="./img/bicicletas/nimbus-home.jpg" width="920" height="1040" alt="Bicicleta Nimbus Strak Preta">
           </div>
           <div class="bicicletas__info">
             <h3 class="font-1-xl cor-11">Nimbus Stark</h3>
@@ -84,7 +86,7 @@
       <li class="bicicletas__card">
         <a class="bicicletas__card-link" href="./bicicletas/nebula.html">
           <div class="bicicletas__img-wrapper">
-            <img src="./img/bicicletas/nebula-home.jpg" alt="Bicicleta Nebula Cosmic Branca">
+            <img src="./img/bicicletas/nebula-home.jpg" width="920" height="1040" alt="Bicicleta Nebula Cosmic Branca">
           </div>
           <div class="bicicletas__info">
             <h3 class="font-1-xl cor-11">Nebula Cosmic</h3>
@@ -110,13 +112,13 @@
 
         <ul class="tecnologia__infos">
           <li>
-            <img src="./img/icones/eletrica.svg" alt="">
+            <img src="./img/icones/eletrica.svg" width="32" height="32" alt="">
             <h3 class="font-2-l cor-2">Motor Elétrico</h3>
             <p class="font-2-s cor-5">Toda Bikcraft é equipada com um motor elétrico que possui duração de até 120h. A bateria é recarregada com a sua energia gasta ao pedalar.</p>
           </li>
 
           <li>
-            <img src="./img/icones/rastreador.svg" alt="">
+            <img src="./img/icones/rastreador.svg" width="32" height="32" alt="">
             <h3 class="font-2-l cor-2">Rastreador</h3>
             <p class="font-2-s cor-5">Sabemos o quão preciosa é a sua Bikcraft, por isso adicionamos rastreadores e sistemas anti-furto para garantir o seu sossego.</p>
           </li>
@@ -126,7 +128,7 @@
       </div>
 
       <div class="tecnologia__img">
-        <img src="./img/fotos/tecnologia.jpg" alt="">
+        <img src="./img/fotos/tecnologia.jpg" width="1422" height="2274" alt="">
       </div>
 
     </div>
@@ -137,21 +139,21 @@
     <h2 class="parceiros__titulo font-1-xxl cor-11 container" id="parceiros-titulo">nossos parceiros<span class="cor-p1">.</span></h2>
 
     <ul class="parceiros__lista">
-      <li><img src="./img/parceiros/caravan.svg" alt="logo Caravan"></li>
-      <li><img src="./img/parceiros/ranek.svg" alt="logo Ranek"></li>
-      <li><img src="./img/parceiros/handel.svg" alt="logo Handel"></li>
-      <li><img src="./img/parceiros/dogs.svg" alt="logo Dogs"></li>
-      <li><img src="./img/parceiros/lescone.svg" alt="logo Lescone"></li>
-      <li><img src="./img/parceiros/flexblog.svg" alt="logo Flexblog"></li>
-      <li><img src="./img/parceiros/wildbeast.svg" alt="logo wildbeast"></li>
-      <li><img src="./img/parceiros/surfbot.svg" alt="logo Surfbot"></li>
+      <li><img src="./img/parceiros/caravan.svg" width="140" height="38" alt="logo Caravan"></li>
+      <li><img src="./img/parceiros/ranek.svg" width="149" height="36" alt="logo Ranek"></li>
+      <li><img src="./img/parceiros/handel.svg" width="139" height="50" alt="logo Handel"></li>
+      <li><img src="./img/parceiros/dogs.svg" width="152" height="39" alt="logo Dogs"></li>
+      <li><img src="./img/parceiros/lescone.svg" width="208" height="41" alt="logo Lescone"></li>
+      <li><img src="./img/parceiros/flexblog.svg" width="165" height="38" alt="logo Flexblog"></li>
+      <li><img src="./img/parceiros/wildbeast.svg" width="196" height="34" alt="logo wildbeast"></li>
+      <li><img src="./img/parceiros/surfbot.svg" width="200" height="49" alt="logo Surfbot"></li>
     </ul>
   </section>
 
   <section class="depoimentos bg-p1" aria-label="Depoimentos">
 
     <div class="depoimentos__img">
-      <img src="./img/fotos/depoimento.jpg" alt="">
+      <img src="./img/fotos/depoimento.jpg" width="1560" height="1360" alt="">
     </div>
 
     <div class="depoimentos__container">
@@ -225,7 +227,7 @@
 
   <footer class="footer__bg bg-c12">
     <div class="footer__container container">
-      <a href="#header"><img src="./img/bikcraft.svg" alt="Logo Bikcraft"></a>
+      <a href="#header"><img src="./img/bikcraft.svg" width="136" height="32" alt="Logo Bikcraft"></a>
 
       <div class="footer__contato">
         <h3 class="font-2-l uppercase cor-0">contato</h3>
@@ -238,11 +240,11 @@
         </ul>
 
         <ul class="footer__lista redes">
-          <li><a href="http://www.instagram.com" target="_blank"><img src="./img/redes/instagram-p 1.svg" alt="Perfil no Instagram"></a></li>
+          <li><a href="http://www.instagram.com" target="_blank"><img src="./img/redes/instagram-p 1.svg" width="32" height="32" alt="Perfil no Instagram"></a></li>
 
-          <li><a href="http://www.facebook.com" target="_blank"><img src="./img/redes/facebook-p 1.svg" alt="Perfil no Facebook"></a></li>
+          <li><a href="http://www.facebook.com" target="_blank"><img src="./img/redes/facebook-p 1.svg" width="32" height="32" alt="Perfil no Facebook"></a></li>
 
-          <li><a href="http://www.youtube.com" target="_blank"><img src="./img/redes/youtube-p 1.svg" alt="Canal do Youtube"></a></li>
+          <li><a href="http://www.youtube.com" target="_blank"><img src="./img/redes/youtube-p 1.svg" width="32" height="32" alt="Canal do Youtube"></a></li>
         </ul>
       </div>
 
