@@ -37,7 +37,6 @@
   position: relative;
   transition: 0.3s ease-in-out;
   justify-content: space-between;
-  margin-bottom: 1rem;
 }
 
 .perguntas__lista > div > dt::before {
@@ -60,6 +59,27 @@
   background-image: url(../../img/icones/seta.svg);
   justify-self: end;
   transition: 0.3s ease-in-out;
+}
+
+.perguntas__lista div:hover dt::after {
+  transform: translateX(-0.75rem);
+}
+
+.perguntas__lista div.gira-seta:hover dt::after {
+  transform: translateX(0.75rem) rotate(0);
+}
+
+.perguntas__lista div.gira-seta dt::after {
+  transform: translateX(-0.75rem) rotate(180deg);
+}
+
+.perguntas__lista div > dd {
+  margin-top: 1rem;
+  display: none;
+}
+
+.perguntas__lista div > dd.resposta-ativa {
+  display: block;
 }
 
 /* =============================== Media Queries */
@@ -122,9 +142,5 @@
 
   .perguntas__lista div:hover dt {
     transform: translateX(0.75rem);
-  }
-
-  .perguntas__lista div:hover dt::after {
-    transform: translateX(-0.75rem) rotate(180deg);
   }
 }

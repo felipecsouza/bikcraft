@@ -1,22 +1,33 @@
-// ================================== HEADER
-const navList = document.querySelectorAll("header nav .header__menu a");
-const paginaAtual = window.location.pathname;
-
-// navList.forEach(function (link) {
-//   const linkLimpo = link.href.replace(/\/$/, "");
-//   const paginaAtualLimpa = paginaAtual.replace(/\/$/, "");
-
-//   if (linkLimpo === paginaAtualLimpa) {
-//     link.classList.add("header__ativo");
-//   }
-// });
+// ================================== HEADER - Ativar link menu
+const navList = document.querySelectorAll(".header__menu a");
 
 navList.forEach((link) => {
-  if (
-    link.pathname === paginaAtual ||
-    (link.pathname === "/" && paginaAtual === "index.html")
-  ) {
-    link.classList.add("header__ativo");
+  link.classList.toggle(
+    "header__ativo",
+    link.pathname === location.pathname ||
+      (link.pathname.endsWith === "/" &&
+        location.pathname.endsWith === "index.html"),
+  );
+});
+
+// =============================== ORÇAMENTO - Ativar item do orçamento
+const parametros = new URLSearchParams(location.search);
+
+parametros.forEach((parametro) => {
+  const elemento = document.getElementById(parametro);
+  if (elemento) {
+    elemento.checked = true;
   }
 });
-console.log("teste");
+
+// ======================================== SEGURO - Caixa Pergunts Frequentes
+const perguntas = document.querySelectorAll(".perguntas__lista > div");
+
+perguntas.forEach((item) => {
+  const resposta = item.querySelector("dd");
+  if (resposta) {
+    item.addEventListener("click", () => {
+      resposta.classList.toggle("resposta-ativa");
+    });
+  }
+});

@@ -221,6 +221,9 @@
 }
 
 @media (max-width: 600px) {
+  #bicicletas.bicicletas {
+    padding-bottom: 3rem;
+  }
   #bicicletas .bicicletas__lista {
     gap: 1.25rem;
   }
