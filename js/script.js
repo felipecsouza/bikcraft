@@ -25,9 +25,12 @@ const perguntas = document.querySelectorAll(".perguntas__lista > div");
 
 perguntas.forEach((item) => {
   const resposta = item.querySelector("dd");
-  if (resposta) {
+  const seta = item.querySelector("img");
+  if (resposta && seta) {
     item.addEventListener("click", () => {
-      resposta.classList.toggle("resposta-ativa");
+      const ativa = resposta.classList.toggle("resposta-ativa");
+      seta.classList.toggle("gira-seta");
+      resposta.ariaHidden = ativa ? false : true;
     });
   }
 });

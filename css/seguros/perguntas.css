@@ -18,6 +18,10 @@
   margin-left: auto;
 }
 
+.perguntas__lista {
+  contain: layout;
+}
+
 .perguntas__lista > div:nth-child(odd) {
   background-color: var(--c1);
   border-radius: 5px;
@@ -26,13 +30,13 @@
 .perguntas__lista > div {
   padding: 1.25rem 2.5rem;
   cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
 }
 
 .perguntas__lista > div > dt {
-  /* display: flex; */
-  display: grid;
-  grid-template-columns: 1fr max-content;
-  gap: 1rem;
+  display: flex;
   align-items: center;
   position: relative;
   transition: 0.3s ease-in-out;
@@ -51,37 +55,44 @@
   transform-origin: right;
 }
 
-.perguntas__lista > div > dt::after {
-  content: "";
-  display: inline-block;
-  width: 0.8125rem;
-  height: 0.3125rem;
-  background-image: url(../../img/icones/seta.svg);
-  justify-self: end;
-  transition: 0.3s ease-in-out;
+.perguntas__lista img {
+  transition: 0.2s ease-in-out;
 }
 
-.perguntas__lista div:hover dt::after {
-  transform: translateX(-0.75rem);
-}
-
-.perguntas__lista div.gira-seta:hover dt::after {
-  transform: translateX(0.75rem) rotate(0);
-}
-
-.perguntas__lista div.gira-seta dt::after {
-  transform: translateX(-0.75rem) rotate(180deg);
+.perguntas__lista img.gira-seta {
+  transform: rotate(180deg);
 }
 
 .perguntas__lista div > dd {
-  margin-top: 1rem;
-  display: none;
+  display: grid;
+  margin-top: 0;
+  grid-row: 2;
+  grid-column: 1/-1;
+  grid-template-rows: 0fr;
+  transition:
+    grid-template-rows 0.3s ease-in-out,
+    margin-top 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.perguntas__lista div > dd > * {
+  min-height: 0;
 }
 
 .perguntas__lista div > dd.resposta-ativa {
-  display: block;
+  margin-top: 1rem;
+  grid-template-rows: 1fr;
 }
 
+@media (hover: hover) {
+  .perguntas__lista div:hover dt::before {
+    transform: scaleX(2);
+  }
+
+  .perguntas__lista div:hover dt {
+    transform: translateX(0.75rem);
+  }
+}
 /* =============================== Media Queries */
 @media (max-width: 1000px) {
   .perguntas {
@@ -132,15 +143,5 @@
 
   .perguntas__lista div > dt {
     font-size: 1rem;
-  }
-}
-
-@media (hover: hover) {
-  .perguntas__lista div:hover dt::before {
-    transform: scaleX(2);
-  }
-
-  .perguntas__lista div:hover dt {
-    transform: translateX(0.75rem);
   }
 }
