@@ -26,11 +26,16 @@ const perguntas = document.querySelectorAll(".perguntas__lista > div");
 perguntas.forEach((item) => {
   const resposta = item.querySelector("dd");
   const seta = item.querySelector("img");
+  const btn = item.querySelector("button");
   if (resposta && seta) {
     item.addEventListener("click", () => {
+      if (window.getSelection().toString()) {
+        return;
+      }
       const ativa = resposta.classList.toggle("resposta-ativa");
       seta.classList.toggle("gira-seta");
-      resposta.ariaHidden = ativa ? false : true;
+      resposta.ariaHidden = !ativa;
+      btn.ariaExpanded = ativa;
     });
   }
 });

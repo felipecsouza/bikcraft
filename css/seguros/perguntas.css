@@ -31,8 +31,28 @@
   padding: 1.25rem 2.5rem;
   cursor: pointer;
   display: grid;
-  grid-template-columns: 1fr max-content;
   align-items: center;
+}
+
+.perguntas__lista > div button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  justify-items: start;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.perguntas__lista > div button:focus-visible {
+  outline: none;
+}
+
+.perguntas__lista > div:has(button:focus-visible) {
+  outline: 2px solid black;
+  outline-offset: 2px;
+  border-radius: 5px;
 }
 
 .perguntas__lista > div > dt {
@@ -41,6 +61,14 @@
   position: relative;
   transition: 0.3s ease-in-out;
   justify-content: space-between;
+}
+
+.perguntas__lista > div > dt span {
+  text-align: start;
+}
+
+.perguntas__lista span {
+  transition: 0.3s ease-in-out;
 }
 
 .perguntas__lista > div > dt::before {
@@ -52,7 +80,7 @@
   position: absolute;
   background-color: var(--p2);
   transition: 0.3s ease-in-out;
-  transform-origin: right;
+  transform-origin: left;
 }
 
 .perguntas__lista img {
@@ -67,7 +95,6 @@
   display: grid;
   margin-top: 0;
   grid-row: 2;
-  grid-column: 1/-1;
   grid-template-rows: 0fr;
   transition:
     grid-template-rows 0.3s ease-in-out,
@@ -89,7 +116,7 @@
     transform: scaleX(2);
   }
 
-  .perguntas__lista div:hover dt {
+  .perguntas__lista div:hover span {
     transform: translateX(0.75rem);
   }
 }
