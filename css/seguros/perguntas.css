@@ -29,7 +29,6 @@
 
 .perguntas__lista > div {
   padding: 1.25rem 2.5rem;
-  cursor: pointer;
   display: grid;
   align-items: center;
 }
@@ -87,7 +86,7 @@
   transition: 0.2s ease-in-out;
 }
 
-.perguntas__lista img.gira-seta {
+.perguntas__lista button[aria-expanded="true"] img {
   transform: rotate(180deg);
 }
 

@@ -21,21 +21,19 @@ parametros.forEach((parametro) => {
 });
 
 // ======================================== SEGURO - Caixa Pergunts Frequentes
-const perguntas = document.querySelectorAll(".perguntas__lista > div");
+const btnsPerguntas = document.querySelectorAll(".perguntas__lista button");
 
-perguntas.forEach((item) => {
-  const resposta = item.querySelector("dd");
-  const seta = item.querySelector("img");
-  const btn = item.querySelector("button");
-  if (resposta && seta) {
-    item.addEventListener("click", () => {
-      if (window.getSelection().toString()) {
-        return;
-      }
-      const ativa = resposta.classList.toggle("resposta-ativa");
-      seta.classList.toggle("gira-seta");
-      resposta.ariaHidden = !ativa;
-      btn.ariaExpanded = ativa;
-    });
-  }
-});
+function ativaResposta(evento) {
+  const pergunta = evento.currentTarget;
+  const resposta = document.getElementById(
+    pergunta.getAttribute("aria-controls"),
+  );
+
+  if (!resposta) return;
+
+  const ativa = resposta.classList.toggle("resposta-ativa");
+  pergunta.ariaExpanded = ativa;
+  resposta.ariaHidden = !ativa;
+}
+
+btnsPerguntas.forEach((btn) => btn.addEventListener("click", ativaResposta));
