@@ -8,12 +8,14 @@
   <title>Bikcraft - Bicicletas Elétricas</title>
   <meta name="description" content="Bicicletas elétricas de alta precisão e qualidade,  feitas sob medida para o cliente. Explore o mundo na sua velocidade com a Bikcraft.">
 
-  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="preload" href="./css/style.css" as="style">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@1,18..144,700&family=Poppins:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="./js/simple-anime.js" defer></script>
   <script src="./js/script.js" defer></script>
 </head>
 
@@ -41,14 +43,14 @@
     <div class="main__container container">
 
       <div class="main__wrapper">
-        <h1 class="main__titulo font-1-xxl cor-0">bicicletas feitas sob medida<span class="cor-p1">.</span></h1>
+        <h1 class="main__titulo font-1-xxl cor-0 fadeInDown" data-anime="0">bicicletas feitas sob medida<span class="cor-p1">.</span></h1>
 
-        <p class="font-2-l cor-5">Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para o cliente. Explore o mundo na sua velocidade com a Bikcraft.</p>
+        <p class="font-2-l cor-5 fadeInDown" data-anime="200">Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para o cliente. Explore o mundo na sua velocidade com a Bikcraft.</p>
 
-        <a class="btn" href="./bicicletas.html">selecione a sua</a>
+        <a class="btn fadeInDown" href="./bicicletas.html" data-anime="400">selecione a sua</a>
       </div>
 
-      <picture class="main__img">
+      <picture class="main__img fadeInDown" data-anime="600">
         <source media="(max-width: 1200px)" srcset="./img/bicicletas/nimbus.jpg">
         <img src="./img/fotos/img-intro.jpg" width="710" height="802" alt="Foto da Bicicleta Nimbus Preta">
       </picture>

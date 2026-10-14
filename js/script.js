@@ -37,3 +37,22 @@ function ativaResposta(evento) {
 }
 
 btnsPerguntas.forEach((btn) => btn.addEventListener("click", ativaResposta));
+
+// ====================== GALERIA BICICLETAS INTERNA
+const btnsImg = document.querySelectorAll(".nimbus__fotos button");
+const galeria = document.querySelector(".nimbus__fotos");
+const desktop = matchMedia("(min-width: 900px)");
+
+function trocaImagem(event) {
+  if (!desktop.matches) return;
+  galeria?.prepend(event.currentTarget);
+}
+
+btnsImg.forEach((btn) => {
+  btn.addEventListener("click", trocaImagem);
+});
+
+// =========================================== ATIVA SIMPLE-ANIME
+if (window.SimpleAnime) {
+  new SimpleAnime();
+}

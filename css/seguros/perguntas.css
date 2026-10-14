@@ -90,7 +90,7 @@
   transform: rotate(180deg);
 }
 
-.perguntas__lista div > dd {
+.js .perguntas__lista div > dd {
   display: grid;
   margin-top: 0;
   grid-row: 2;
@@ -101,11 +101,11 @@
   overflow: hidden;
 }
 
-.perguntas__lista div > dd > * {
+.js .perguntas__lista div > dd > * {
   min-height: 0;
 }
 
-.perguntas__lista div > dd.resposta-ativa {
+.js .perguntas__lista div > dd.resposta-ativa {
   margin-top: 1rem;
   grid-template-rows: 1fr;
 }
